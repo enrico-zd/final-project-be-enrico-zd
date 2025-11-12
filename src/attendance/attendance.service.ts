@@ -30,7 +30,7 @@ export class AttendanceService {
     private readonly shiftService: ShiftsService,
   ) {}
 
-  @Cron('0 5 0 * * *', { name: randomUUID(), timeZone: 'Asia/Jakarta' })
+  @Cron('0 55 0 * * *', { name: randomUUID(), timeZone: 'Asia/Jakarta' })
   async createAllDefaultUserAttendance() {
     const userDetail = await this.userCompDetailService.findAllUserCom();
 

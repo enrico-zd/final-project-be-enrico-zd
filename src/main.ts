@@ -10,6 +10,7 @@ async function bootstrap() {
     origin: [
       'http://localhost:3000',
       'https://final-project-fe-enrico-zd.vercel.app',
+      'https://hrms-ez-app.vercel.app',
     ],
     methods: ['GET', 'POST', 'PATCH', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
@@ -27,6 +28,6 @@ async function bootstrap() {
   const httpAdapterHost = app.get(HttpAdapterHost);
   app.useGlobalFilters(new RepositoryExceptionFilter(httpAdapterHost));
 
-  await app.listen(process.env.PORT ?? 5000);
+  await app.listen(process.env.PORT ?? 5001);
 }
 bootstrap();
